@@ -14,14 +14,13 @@ import {
     FormErrorMessage,
     Flex,
     Heading,
-    Checkbox,
-    RadioGroup,
+   RadioGroup,
     Radio, Grid, GridItem,
-    Card, CardHeader, CardBody, CardFooter,
-    Spacer, Text, StackDivider, InputLeftAddon,
-    InputRightAddon,InputGroup,Textarea
+    Card, CardHeader, CardBody, 
+    Spacer,  InputLeftAddon,
+    InputRightAddon,InputGroup,Textarea,Tabs,
 } from "@chakra-ui/react";
-import { ArrowBackIcon, AddIcon } from "@chakra-ui/icons";
+import { ArrowBackIcon, AddIcon,DeleteIcon } from "@chakra-ui/icons";
 import { Select } from "chakra-react-select";
 
 
@@ -115,6 +114,7 @@ function ItemForm() {
                                                     {errors.item_name && errors.item_name.message}
                                                 </FormErrorMessage>
                                             </FormControl>
+                                          
                                         </GridItem>
                                         <GridItem>
                                             <Controller

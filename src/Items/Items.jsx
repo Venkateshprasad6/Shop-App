@@ -14,10 +14,10 @@ import {
     Button,
     Spacer,
     Heading,
-    Flex, TableCaption
+    Flex, TableCaption,
 } from '@chakra-ui/react'
-import { ArrowBackIcon,AddIcon, DeleteIcon, EditIcon } from "@chakra-ui/icons";
-import { useSelector } from 'react-redux';
+import { ArrowBackIcon,AddIcon, DeleteIcon,  } from "@chakra-ui/icons";
+
 
 
 
@@ -51,6 +51,8 @@ function Items() {
                     <Table variant='striped' >
                     <TableCaption>  </TableCaption>
                         <Thead bg="#f2f2f2">
+                        
+  
                             <Tr>
                                 <Th>  Item No</Th>
                                 <Th> Item Name</Th>
@@ -59,7 +61,9 @@ function Items() {
                                 <Th> Amount </Th>
                                 <Th> Act  </Th>
 
+
                             </Tr>
+                           
                         </Thead>
                         <Tbody>
 

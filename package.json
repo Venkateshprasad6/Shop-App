@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^13.5.0",
     "api": "^5.0.8",
     "chakra-react-select": "^4.6.0",
+    "openai": "^3.3.0",
     "react": "^18.2.0",
     "react-addons": "^0.9.1-deprecated",
     "react-addons-create-fragment": "^15.6.2",

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link as Navlink} from 'react-router-dom';
 import { useForm } from "react-hook-form";
+
 import {
   IconButton,
   Avatar,
@@ -36,13 +37,14 @@ import {
 import{MoonIcon,SunIcon} from'@chakra-ui/icons';
 
 
+
+
 const LinkItems = [
- 
   { name: 'Parties', icon: FiTrendingUp,to:'/' },
   { name: 'Sales', icon: FiTrendingUp,to:'/Sales' },
   { name: 'Items', icon: FiTrendingUp,to:'/Items' },
+ 
 ];
-  
 
 export default function Sidebar({children}) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -77,7 +79,12 @@ export default function Sidebar({children}) {
 
 
 const SidebarContent = ({ onClose, ...rest }) => {
+  const { colorMode } = React.useContext(ColorModeContext);
+  const { toggleColorMode } = React.useContext(ColorModeContext);
   return (
+    <>
+    
+ 
     <Box
       transition="3s ease"
       bg={useColorModeValue('white', 'gray.900')}
@@ -89,7 +96,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
       {...rest}>
       <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
         <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
-          BILLING SOFTWARE
+          Logo
         </Text>
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
@@ -99,12 +106,13 @@ const SidebarContent = ({ onClose, ...rest }) => {
         </NavItem>
       ))}
     </Box>
+    </>
   );
 };
 
 
 const NavItem = ({ to,icon, children, ...rest }) => {
-
+  
   return (
     <Link 
     as={Navlink}
@@ -146,9 +154,9 @@ const MobileNav = ({ onOpen, ...rest }) => {
       px={{ base: 4, md: 4 }}
       height="20"
       alignItems="center"
-      bg={useColorModeValue('white', 'gray.900')}
+      bg={useColorModeValue('')}
       borderBottomWidth="1px"
-      borderBottomColor={useColorModeValue('gray.200', 'gray.700')}
+      borderBottomColor={useColorModeValue('black', 'white')}
       justifyContent={{ base: 'space-between', md: 'flex-end' }}
       {...rest}>
       <IconButton
