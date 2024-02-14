@@ -1,76 +1,60 @@
-import React, { useState, useEffect } from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
 
 import {
-    Table,
-    Thead,
-    Tbody,
-    Tr,
-    Th,
-    Td,
-    TableContainer,
-    Box,
-    Button,
-    Spacer,
-    Heading,
-    Flex, TableCaption
-} from '@chakra-ui/react'
-import { ArrowBackIcon,AddIcon, DeleteIcon, EditIcon } from "@chakra-ui/icons";
-import { useSelector } from 'react-redux';
+  Table,
+  Thead,
+  Tbody,
+  Tr,
+  Th,
+  TableContainer,
+  Button,
+  Spacer,
+  Heading,
+  Flex,
 
+} from "@chakra-ui/react";
+import { AddIcon } from "@chakra-ui/icons";
 
-
+import CustomBox from "../Components/customBox";
 
 function Sales() {
-
-
-
-    return (
-        <>
-            <Box bg="white" p={5} mb={5} style={{ borderRadius: "10px" }}>
-                <Flex alignItems='center' gap={2}  >
-                    
-                    <Heading as="h3" size="lg" color="gray.600">
-                        Sales
-                    </Heading>
-                    <Spacer />
-                    <Link to="/sales_form">
-                   
-                    <Button colorScheme="blue" >
-                     
-                    <AddIcon w={4} h={4} pr={2} />
-                   Sales
-                </Button>
-                </Link>
-                </Flex>
-            </Box>
-            < Box p={5} color="black" bg="white" style={{ borderRadius: "10px" }}>
-
-                <TableContainer mt={8}>
-                    <Table variant='striped' >
-                    <TableCaption>  No Items To Display</TableCaption>
-                        <Thead bg="#f2f2f2">
-                            <Tr>
-                                <Th> S.No</Th>
-                                <Th> Date</Th>
-                                <Th> Invoice Number </Th>
-                                <Th> Party Name  </Th>
-                                <Th> Amount </Th>
-                                <Th> Act  </Th>
-
-                            </Tr>
-                        </Thead>
-                        <Tbody>
-
-                        </Tbody>
-                    </Table>
-
-                </TableContainer>
-
-            </Box>
-        </>
-
-    )
+  return (
+    <>
+   <CustomBox borderStyle="solid-black" borderWidth="5px">
+        <Flex alignItems="center" gap={2}>
+          <Heading as="h3" size="lg" >
+            Sales
+          </Heading>
+          <Spacer />
+          <Link to="/sales_form">
+            <Button colorScheme="blue">
+              <AddIcon w={4} h={4} pr={2} />
+              Sales
+            </Button>
+          </Link>
+        </Flex>
+      </CustomBox>
+      <CustomBox borderStyle="solid-black" borderWidth="5px">
+        <TableContainer mt={8}>
+          <Table variant="striped">
+            {/* <TableCaption> No Items To Display</TableCaption> */}
+            <Thead >
+              <Tr>
+                <Th> S.No</Th>
+                <Th> Date</Th>
+                <Th> Invoice Number </Th>
+                <Th> Party Name </Th>
+                <Th> Amount </Th>
+                <Th> Act </Th>
+              </Tr>
+            </Thead>
+            <Tbody></Tbody>
+          </Table>
+        </TableContainer>
+      </CustomBox>
+    </>
+  );
 }
 
 export default Sales;

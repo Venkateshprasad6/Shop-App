@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ChakraProvider } from '@chakra-ui/react';
-import {  BrowserRouter,Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Layout from './Pages/layout';
 import Parties from './Parties/Parties';
 import PartiesForm from "./Parties/PartiesForm";
